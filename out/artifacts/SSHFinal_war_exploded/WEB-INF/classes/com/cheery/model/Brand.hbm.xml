@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.cheery.model">
+    <!--name：实体类名,table：对应数据库表名-->
+    <class name="BrandEntity" table="brand">
+        <!-- 配置主键映射 -->
+        <!--name：实体类的属性名,type：数据类型,column：数据库表的字段名-->
+        <id name="brandId" type="java.lang.Integer">
+            <column name="brandId"></column>
+            <!-- 设置主键生成方式 -->
+            <generator class="native"></generator>
+        </id>
+        <!-- 配置其他属性 -->
+        <!--name：实体类的属性名,type：数据类型,column：数据库表的字段名-->
+        <property name="brandName" type="java.lang.String">
+            <column name="brandName"></column>
+        </property>
+        <property name="desc" type="java.lang.String">
+            <column name="desc"></column>
+        </property>
+    </class>
+</hibernate-mapping>

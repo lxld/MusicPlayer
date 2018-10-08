@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.cheery.model">
+    <!--name：实体类名,table：对应数据库表名-->
+    <class name="MasterEntity" table="master">
+        <!-- 配置主键映射 -->
+        <!--name：实体类的属性名,type：数据类型,column：数据库表的字段名-->
+        <id name="masterId" type="java.lang.Integer">
+            <column name="masterId"></column>
+            <!-- 设置主键生成方式 -->
+            <generator class="assigned"></generator>
+        </id>
+        <!-- 配置其他属性 -->
+        <!--name：实体类的属性名,type：数据类型,column：数据库表的字段名-->
+        <property name="userName" type="java.lang.String">
+            <column name="userName"></column>
+        </property>
+        <property name="passWord" type="java.lang.String">
+            <column name="passWord"></column>
+        </property>
+        <property name="realName" type="java.lang.String">
+            <column name="realName"></column>
+        </property>
+        <property name="gender" type="java.lang.String">
+            <column name="gender"></column>
+        </property>
+    </class>
+</hibernate-mapping>
