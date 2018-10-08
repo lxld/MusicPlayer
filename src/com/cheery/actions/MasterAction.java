@@ -27,7 +27,7 @@ public class MasterAction extends ActionSupport implements ModelDriven<MasterEnt
         if (masterServ.masterLogin(master)) {
             return Action.SUCCESS;
         } else {
-            session.put("tips", "账户名或密码错误~");
+            session.put("tips", "账户名或密码错误~")
             return Action.INPUT;
         }
     }
